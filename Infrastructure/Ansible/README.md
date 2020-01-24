@@ -46,7 +46,7 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
 - [Variables](./05_variables/variables.md)
 - [Secrets](./06_secrets/secrets.md)
 - [Faits](./07_faits/faits.md)
-- [Contôle des tâches](./08_controle-taches.md)
+- [Contôle des tâches](./08_controle-taches/controle-taches.md)
 
 ## Memo
 
