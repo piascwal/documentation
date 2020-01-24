@@ -47,7 +47,7 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
 - [Secrets](./06_secrets/secrets.md)
 - [Faits](./07_faits/faits.md)
 - [Boucles et conditions](./08_controle-taches/boucles-conditions.md)
-- [Gestionnaires (Handlers)](./08_controle-taches/gestionnairs.md)
+- [Gestionnaires (Handlers)](./08_controle-taches/gestionnaires.md)
 - [Gestion des échecs de tâche](./08_controle-taches/echecs-tache.md)
 
 ## Memo
