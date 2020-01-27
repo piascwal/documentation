@@ -46,11 +46,15 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
 - [Variables](./05_variables/variables.md)
 - [Secrets](./06_secrets/secrets.md)
 - [Faits](./07_faits/faits.md)
-- [Boucles et conditions](./08_controle-taches/boucles-conditions.md)
-- [Gestionnaires (Handlers)](./08_controle-taches/gestionnaires.md)
-- [Gestion des échecs de tâche](./08_controle-taches/echecs-tache.md)
-- [Déploiement de fichiers sur les hôtes](./09_deploiement_fichiers_hotes/deploiement_fichiers_hotes.md)
+- Contrôle des tâches
+  - [Boucles et conditions](./08_controle-taches/boucles-conditions.md)
+  - [Gestionnaires (Handlers)](./08_controle-taches/gestionnaires.md)
+  - [Gestion des échecs de tâche](./08_controle-taches/echecs-tache.md)
+  - [Déploiement de fichiers sur les hôtes](./09_deploiement_fichiers_hotes/deploiement_fichiers_hotes.md)
 - [Déploiement de fichiers personnalisés avec des modèles Jinja2](./09_deploiement_fichiers_hotes/fichiers-perso-jinja2.md)
+- Projets Volumineux
+  - [Inventaires dynamiques et multi-inventaires](./10_projets-volumineux/inventaire-dynamique.md)
+  - [Parallélisme](./10_projets-volumineux/parallelisme.md)
 
 ## Memo
 
@@ -73,6 +77,22 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
     ```sh
     ansible-doc ping
     ```
+
+#### Inventaire
+
+##### Groupes spéciaux
+
+- **all** ou **\*** : Tous les hôtes de l'inventaires
+- **ungrouped** : Tous les hôtes n'appartenant à aucun groupe
+
+#### Playbook
+
+##### Directive hosts
+
+- ***.example.com** : tous les hôtes ou groupes d'hôtes se terminant par example.com
+- **toto,tata,192.167.23.35** : tous les hôtes du groupe toto et tata ainsi que l'hôst 192.167.23.35
+- **lab,&datacenter1**: Utilisation du `&`en tant que **AND logique**. Ici les machines du groupe `lab` uniquement si elles se trouvent également dans le groupe `datacenter1`
+- **datacenter,!test2.example.com**: Utilisation du '!' en tant que **NOT logique**. ICi tous les hôtes définis dans le groupe datacenter, à l'exception de test2.example.com
 
 #### Liste des faits associés à un hôte
 
