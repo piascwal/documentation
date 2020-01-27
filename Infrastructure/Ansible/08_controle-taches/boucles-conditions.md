@@ -145,7 +145,6 @@ when: >
 
 :bulb: On remarquera le caractère plus grand que (**>**), utilisé pour pouvoir diviser la condition sur plusieurs lignes.
 
-
 ## Combinaison de boucles et de conditions
 
 Exemple : On install mariadb que si le système de fichier est monté sur / avec plus de 300Mo libre. (ansible_mounts est un fait représentant une liste de dictionnaire)
