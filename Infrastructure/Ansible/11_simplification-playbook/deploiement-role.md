@@ -37,7 +37,7 @@ Dans le réperoire `roles/requirements.yml` (sert de manifest de dépendance pou
 ansible-galaxy install -r roles/requirements.yml -p roles
 ```
 
-Exemple de fichier de configuration à l'aide de plusieurs sources 
+Exemple de fichier de configuration à l'aide de plusieurs sources
 
 ```sh
 $cat roles/requirements.yml

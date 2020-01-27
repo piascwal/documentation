@@ -61,7 +61,7 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
   - [Création de rôles](./11_simplification-playbook/creation-role.md)
   - [Déploiement de rôles (Ansible Galaxy)](./11_simplification-playbook/deploiement-role.md)
   - [Rôle système](./11_simplification-playbook/role-systeme.md)
-- Résolution des problèmes liés à Ansible
+- [Résolution des problèmes liés à Ansible](./12_problemes-ansible/problemes-ansible.md)
 
 ## Memo
 
@@ -116,3 +116,21 @@ ansible system_hostname -i inventory_file -m setup
   ```
 
 - Eviter d'utiliser les modules `command`, `shell` et `raw` car ils utilisent des commandes arbitraire et il est très facile d'écrire des playbook **non-idempotent**
+
+- utiliser le module **parted** pour vous assurer qu'un disque est correctement partitionné ;
+
+utiliser le module **lvg** pour gérer les groupes de volumes et les volumes physiques LVM ;
+
+utiliser le module **lvol** pour gérer les volumes logiques LVM ;
+
+utiliser le fait **ansible_facts['lvm']** pour obtenir des informations sur les paramètres LVM existants sur les hôtes gérés ;
+
+utiliser le module **filesystem** pour formater les périphériques de bloc avec des systèmes de fichiers ;
+
+utiliser le module **mount** pour ajouter des entrées pour vos systèmes de fichiers dans **/etc/fstab** et les monter immédiatement.
+
+## Documentations
+
+[Packaging Modules](https://docs.ansible.com/ansible/latest/modules/list_of_packaging_modules.html)
+[System Modules](https://docs.ansible.com/ansible/latest/modules/list_of_system_modules.html)
+[Identity Modules](https://docs.ansible.com/ansible/latest/modules/list_of_identity_modules.html)
