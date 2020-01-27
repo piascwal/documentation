@@ -49,6 +49,8 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
 - [Boucles et conditions](./08_controle-taches/boucles-conditions.md)
 - [Gestionnaires (Handlers)](./08_controle-taches/gestionnaires.md)
 - [Gestion des échecs de tâche](./08_controle-taches/echecs-tache.md)
+- [Déploiement de fichiers sur les hôtes](./09_deploiement_fichiers_hotes/deploiement_fichiers_hotes.md)
+- [Déploiement de fichiers personnalisés avec des modèles Jinja2](./09_deploiement_fichiers_hotes/fichiers-perso-jinja2.md)
 
 ## Memo
 
@@ -71,6 +73,12 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
     ```sh
     ansible-doc ping
     ```
+
+#### Liste des faits associés à un hôte
+
+```sh
+ansible system_hostname -i inventory_file -m setup
+```
 
 ## Bon à savoir
 
