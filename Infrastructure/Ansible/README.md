@@ -56,7 +56,7 @@ Si l'on joue un playbook plusieurs fois sur un même host. le résultat doit tou
   - [Inventaires dynamiques et multi-inventaires](./10_projets-volumineux/inventaire-dynamique.md)
   - [Parallélisme](./10_projets-volumineux/parallelisme.md)
   - [Inclusion Importation fichier](./10_projets-volumineux/inclusion_importation_fichiers.md)
--Simplification des Playbook avec des rôles
+- Simplification des Playbook avec des rôles
   - [Strucutre d'un rôle](./11_simplification-playbook/structure-role.md)
   - [Création de rôles](./11_simplification-playbook/creation-role.md)
   - [Déploiement de rôles (Ansible Galaxy)](./11_simplification-playbook/deploiement-role.md)
